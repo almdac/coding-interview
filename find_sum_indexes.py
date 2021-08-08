@@ -9,5 +9,4 @@ class Solution:
                 return (hash[n], i)
             else:
                 hash[x-n] = i
-
         return None
