@@ -2,7 +2,7 @@
 # arr[i] + arr[j] == x in O(n) time
 
 class Solution:
-    def find_sum_indexes(self, arr: List[int], x: int) -> Tuple[int, int]:
+    def find_sum_indexes(self, arr: list[int], x: int) -> tuple[int, int]:
         hash = {}
         for i, n in enumerate(arr):
             if n in hash:

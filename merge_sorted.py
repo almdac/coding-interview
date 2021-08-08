@@ -1,7 +1,7 @@
 # https://leetcode.com/explore/item/3253
 
 class Solution:
-    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+    def merge(self, nums1: list[int], m: int, nums2: list[int], n: int) -> None:
         left, right, head = m-1, n-1, m+n-1
         while right >= 0 and left >= 0:
             if nums2[right] > nums1[left]:
