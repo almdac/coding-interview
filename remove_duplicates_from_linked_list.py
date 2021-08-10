@@ -11,14 +11,12 @@ class LinkedList:
 
     def remove_duplicates(self) -> None:
         node = self.head
-        hash = {
-            node.data: True
-        }
-        while node:
+        hash = { node.data }
+        while node and node.next:
             if node.next.data in hash:
                 node.next = node.next.next
             else:
-                hash[node.next.data] = True
+                hash.add(node.next.data)
             node = node.next
     
     def print(self) -> None:
