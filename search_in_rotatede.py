@@ -36,9 +36,3 @@ class Solution:
         if nums[left] == target:
             return left
         return -1
-
-def main():
-    print(Solution().search_in_rotated(1, [1]))
-
-if __name__ == '__main__':
-    main()
