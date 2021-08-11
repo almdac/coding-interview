@@ -18,6 +18,16 @@ class LinkedList:
             else:
                 hash.add(node.next.data)
             node = node.next
+
+    def remove_duplicates_nobuffer(self) -> None:
+        current = self.head
+        while current and current.next:
+            runner = current
+            while runner and runner.next:
+                if runner.next.data == current.data:
+                    runner.next = runner.next.next
+                runner = runner.next
+            current = current.next
     
     def print(self) -> None:
         node = self.head
@@ -29,7 +39,7 @@ class LinkedList:
 
 def main():
     linkedList = LinkedList(Node(1, Node(2, Node(7, Node(2, Node(27, Node(7)))))))
-    linkedList.remove_duplicates()
+    linkedList.remove_duplicates_nobuffer()
     linkedList.print()
 
 if __name__ == '__main__':
